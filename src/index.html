@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Experiments</title>
+</head>
+<body>
+<svg width="910" height="910" viewBox="0 0 910 910">
+    <defs>
+        <line x1="0" y1="900" x2="900" y2="900" stroke="black" stroke-width="9" id="koch0"></line>
+        <g id="koch1" transform="translate(0,600) scale(0.3333333)">
+            <use xlink:href="#koch0"></use>
+            <use xlink:href="#koch0" transform="translate(900) rotate(-60,0,900)"></use>
+            <use xlink:href="#koch0" transform="rotate(60,1800,900) translate(900)"></use>
+            <use xlink:href="#koch0" transform="translate(1800)"></use>
+        </g>
+        <g id="koch2" transform="translate(0,600) scale(0.3333333)">
+            <use xlink:href="#koch1"></use>
+            <use xlink:href="#koch1" transform="translate(900) rotate(-60,0,900)"></use>
+            <use xlink:href="#koch1" transform="rotate(60,1800,900) translate(900)"></use>
+            <use xlink:href="#koch1" transform="translate(1800)"></use>
+        </g>
+        <g id="koch3" transform="translate(0,600) scale(0.3333333)">
+            <use xlink:href="#koch2"></use>
+            <use xlink:href="#koch2" transform="translate(900) rotate(-60,0,900)"></use>
+            <use xlink:href="#koch2" transform="rotate(60,1800,900) translate(900)"></use>
+            <use xlink:href="#koch2" transform="translate(1800)"></use>
+        </g>
+    </defs>
+    <use xlink:href="#koch1"></use>
+</svg>
+</body>
+</html>
+
